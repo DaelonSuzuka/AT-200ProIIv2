@@ -18,6 +18,7 @@ build_settings:
     processor: 18F26K42
     programmer: ICD-U80-win
     defines:
+      - RELEASE
       # - USB_ENABLED
     
     skip_rules:

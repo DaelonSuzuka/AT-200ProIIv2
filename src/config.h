@@ -50,10 +50,10 @@
 // CONFIG4H
 #pragma config WRTB = OFF // Boot Block Write Protection bit
 // Configuration Register Write Protection bit
-#if DEVELOPMENT
-    #pragma config WRTC = OFF
-#else
+#if RELEASE
     #pragma config WRTC = ON
+#else
+    #pragma config WRTC = OFF
 #endif
 #pragma config WRTD = OFF   // Data EEPROM Write Protection bit
 #pragma config WRTSAF = OFF // SAF Write protection bit
@@ -61,10 +61,10 @@
 
 // CONFIG5L
 // PFM and Data EEPROM Code Protection bit
-#if DEVELOPMENT
-    #pragma config CP = OFF
-#else
+#if RELEASE
     #pragma config CP = ON
+#else
+    #pragma config CP = OFF
 #endif
 
 #endif // _CONFIG_H_
